@@ -1,0 +1,38 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<div class="container">
+<div class="row">
+<div class="col-sm-3"></div>
+<div class="col-sm-6">
+@* captura de datos *@
+<div class="panel panel-primary">
+<div class="panel-heading">Tabla de Multiplicar</div>
+<div class="panel-body">
+<form action="/" method="post">
+<div class="form-group">
+    <input type="text" class="form-control" name="txtTabla" value="" autocomplete="off" placeholder="Ingrese numero de la tabla"/>
+</div>
+<input type="submit" class="btn btn-success btn-lg" name="btn" value="CALCULAR" />
+</form>
+</div>
+</div>
+@* Resultados *@
+@if (ViewBag.x == true) {
+<div class="panel panel-danger">
+<div class="panel-heading">Resultados</div>
+<div class="panel-body">
+@foreach (var item in ViewBag.ver)
+{
+<p>@item</p>
+}
+</div>
+</div>
+}
+</div>
+<div class="col-sm-3"></div>
+</div>
+</div>
+
